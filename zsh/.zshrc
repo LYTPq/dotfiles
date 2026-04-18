@@ -45,3 +45,4 @@ if [[ $- == *i* ]]; then
     fi
   fi
 fi
+export DOTFILES="$HOME/Arch-dotfiles"
