@@ -1,5 +1,6 @@
 # symlinked to ~/.zshrc.
 
+
 if [[ $- == *i* ]]; then
   # Instant Prompt (Powerlevel10k)
   typeset -g POWERLEVEL9K_INSTANT_PROMPT=off
@@ -13,8 +14,7 @@ if [[ $- == *i* ]]; then
 
   zsh_plugins=${ZDOTDIR:-~}/.zsh_plugins
   [[ -f ${zsh_plugins}.txt ]] || touch ${zsh_plugins}.txt
-  fpath=($HOME/.antidote/functions $fpath)
-  autoload -Uz antidote
+  source /usr/share/zsh-antidote/antidote.zsh
   if [[ ! ${zsh_plugins}.zsh -nt ${zsh_plugins}.txt ]]; then
     antidote bundle <${zsh_plugins}.txt >|${zsh_plugins}.zsh
   fi
@@ -32,6 +32,7 @@ if [[ $- == *i* ]]; then
     source "$zsh_config_dir/function.zsh"
     source "$zsh_config_dir/tmux_rename.zsh"
     source "$zsh_config_dir/.p10k.zsh"
+    source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
   else
     echo "Warning: zsh config directory '$zsh_config_dir' not found."
   fi

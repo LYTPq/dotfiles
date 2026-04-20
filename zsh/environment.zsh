@@ -1,5 +1,5 @@
 # environment variables
-export PNPM_HOME="/home/r4ppz/.local/share/pnpm"
+export PNPM_HOME="$HOME/.local/share/pnpm"
 export BUN_INSTALL="$HOME/.bun"
 export BUN_INSTALL_CACHE_DIR="$BUN_INSTALL/install/cache"
 export GOPATH="$HOME/.go"

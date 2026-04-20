@@ -1,6 +1,6 @@
 #!/bin/bash
 
-TEMP=$(sensors 2>/dev/null | awk '/^Package id 0:/ {gsub(/\+|°C/,"",$4); print int($4); exit}')
+TEMP=$(sensors 2>/dev/null | awk '/^Tctl:/ {gsub(/\+|°C/,"",$2); print int($2); exit}')
 
 if [ -z "$TEMP" ]; then
   TEMP=0
