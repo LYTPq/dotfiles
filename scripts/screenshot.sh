@@ -39,7 +39,7 @@ fi
 # Ensure slurp overlay clears before grim captures
 sleep 0.2
 
-grim -g "$REGION" "$FILENAME"
+grim -g "$REGION" "$FILENAME" && wl-copy < "$FILENAME"
 
 if [[ -s "$FILENAME" ]]; then
   notify-send -h boolean:transient:true \

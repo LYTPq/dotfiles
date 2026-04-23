@@ -1,7 +1,13 @@
+
+# EITHER I AM RETARDED AS FUCK OR CLAUDE BY UNKNOWN REASONS BECOME THE MOST STUPID PIECE OF FUCKING TWAT I HAVE EVER
+# SEEN SO IT IS BETTER TO INSPECT THIS BEFORE LAUNCH ON A NEW MACHINE
+# APPARANTLY STUFF WITH SYSTEMD IS NOT WORKING
+# AND I NEED TO DO SOMETHING WITH THE ./CONFIG/SYSTEMD FILES(BY SOMETHING I MEAN MANAGE THEM, OR NOT, I STILL)
+
 #!/bin/bash
 set -euo pipefail
 
-DOTFILES="${DOTFILES:-"$HOME/Arch-dotfiles")}"
+DOTFILES="${DOTFILES:-"$HOME/Arch-dotfiles"}"
 CONFIG_DIR="$HOME/.config"
 
 CONFIG_LINKS=(
@@ -12,7 +18,6 @@ CONFIG_LINKS=(
   nvim
   rofi
   swaync
-  systemd
   waybar
   yazi
   fastfetch
@@ -22,6 +27,7 @@ CONFIG_LINKS=(
   opencode
   pgcli
 )
+
 
 link_item() {
   local src="$1"
@@ -45,3 +51,26 @@ link_item "$DOTFILES/zsh/.p10k.zsh" "$HOME/.p10k.zsh"
 link_item "$DOTFILES/zsh/.zprofile" "$HOME/.zprofile"
 link_item "$DOTFILES/zsh/.zsh_plugins.txt" "$HOME/.zsh_plugins.txt"
 link_item "$DOTFILES/git/.gitconfig" "$HOME/.gitconfig"
+
+
+# ---- systemd user units (file-by-file, not whole-dir) ----
+mkdir -p "$HOME/.config/systemd/user"
+
+SYSTEMD_UNITS=(
+  hyprland.target
+  battery-monitor.service
+  ydotoold.service
+)
+
+for unit in "${SYSTEMD_UNITS[@]}"; do
+  link_item "$DOTFILES/systemd/user/$unit" "$HOME/.config/systemd/user/$unit"
+done
+
+SYSTEMD_DROPINS=(
+  hypridle.service.d
+  hyprpolkitagent.service.d
+)
+
+for dropin in "${SYSTEMD_DROPINS[@]}"; do
+  link_item "$DOTFILES/systemd/user/$dropin" "$HOME/.config/systemd/user/$dropin"
+done

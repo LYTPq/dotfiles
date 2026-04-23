@@ -25,7 +25,7 @@ done
 
 mkdir -p "$SCREENSHOT_DIR"
 
-grim "$FILENAME"
+grim "$FILENAME" && wl-copy < "$FILENAME"
 
 if [[ -s "$FILENAME" ]]; then
   notify-send -h boolean:transient:true \
