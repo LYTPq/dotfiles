@@ -3,9 +3,9 @@ set -euo pipefail
 
 SESSION="${1:-dev}"
 
-FRONTDIR='/home/r4ppz/Projects/research-repository/frontend'
-BACKDIR='/home/r4ppz/Projects/research-repository/backend/'
-DOCSDIR='/home/r4ppz/Projects/research-repository/docs/'
+FRONTDIR='/home/rahman/Projects/research-repository/frontend'
+BACKDIR='/home/rahman/Projects/research-repository/backend/'
+DOCSDIR='/home/rahman/Projects/research-repository/docs/'
 
 create_tmux_session() {
   local session="$1"

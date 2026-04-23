@@ -37,7 +37,7 @@ if [[ -f "$STATE" ]]; then
   # ZEN mode is active, switch to NORMAL
   set_hyprland "$NORMAL_GAPS_OUTER" "$NORMAL_GAPS_INNER" "$NORMAL_BORDER_SIZE" "$NORMAL_ROUNDING" "$NORMAL_ROUNDING_POWER"
   set_wallpaper "$NORMAL_WALLPAPER"
-  waybar &
+  waybar & disown
   rm -f "$STATE"
 else
   # ZEN mode is not active, switch to ZEN

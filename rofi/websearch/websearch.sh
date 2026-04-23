@@ -2,7 +2,7 @@
 
 declare -A sites=(
   [fb]="https://www.facebook.com/messages"
-  [gh]="https://github.com/r4ppz"
+  [gh]="https://github.com/rahman"
   [yt]="https://www.youtube.com"
   [red]="https://www.reddit.com/"
   [pin]="https://www.pinterest.com"
