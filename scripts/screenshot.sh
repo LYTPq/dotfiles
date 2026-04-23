@@ -16,6 +16,8 @@ flock -n 200 || {
   exit 1
 }
 
+trap 'rm -f "$LOCKFILE"' EXIT
+
 for cmd in grim slurp notify-send; do
   if ! command -v "$cmd" &>/dev/null; then
     printf "Missing required command: %s\n" "$cmd" >&2

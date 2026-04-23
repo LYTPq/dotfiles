@@ -37,12 +37,12 @@ if [[ -f "$STATE" ]]; then
   # ZEN mode is active, switch to NORMAL
   set_hyprland "$NORMAL_GAPS_OUTER" "$NORMAL_GAPS_INNER" "$NORMAL_BORDER_SIZE" "$NORMAL_ROUNDING" "$NORMAL_ROUNDING_POWER"
   set_wallpaper "$NORMAL_WALLPAPER"
-  systemctl --user start waybar.service || true
+  waybar &
   rm -f "$STATE"
 else
   # ZEN mode is not active, switch to ZEN
   set_hyprland "$ZEN_GAPS_OUTER" "$ZEN_GAPS_INNER" "$ZEN_BORDER_SIZE" "$ZEN_ROUNDING" "$ZEN_ROUNDING_POWER"
   set_wallpaper "$ZEN_WALLPAPER"
-  systemctl --user stop waybar.service || true
+  pkill waybar || true
   touch "$STATE"
 fi
