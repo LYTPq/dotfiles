@@ -2,7 +2,7 @@
 set -euo pipefail
 
 STATE="$HOME/.cache/hypr-zen-mode"
-MONITOR="eDP-1"
+MONITOR=""
 
 # Configuration
 NORMAL_GAPS_OUTER=10
@@ -10,14 +10,14 @@ NORMAL_GAPS_INNER=5
 NORMAL_BORDER_SIZE=2
 NORMAL_ROUNDING=1
 NORMAL_ROUNDING_POWER=5
-NORMAL_WALLPAPER="$DOTFILES/wallpaper/wallpaper1.png"
+NORMAL_WALLPAPER="$DOTFILES/wallpaper/wallpaper3.png"
 
 ZEN_GAPS_OUTER=0
 ZEN_GAPS_INNER=0
 ZEN_BORDER_SIZE=0
 ZEN_ROUNDING=0
 ZEN_ROUNDING_POWER=0
-ZEN_WALLPAPER="$DOTFILES/wallpaper/plain-wallpaper.png"
+ZEN_WALLPAPER="$DOTFILES/wallpaper/wallpaper3.png"
 
 # Functions
 set_hyprland() {
