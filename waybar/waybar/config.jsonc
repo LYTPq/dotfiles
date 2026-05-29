@@ -130,8 +130,8 @@
       "󰃟", // 75-89%
       "󰃠" // 90-100%
     ],
-    "on-scroll-up": "brightnessctl set +1%",
-    "on-scroll-down": "brightnessctl set 1%-",
+    "on-scroll-up": "brightnessctl set -1%",
+    "on-scroll-down": "brightnessctl set 1%+",
     "on-click": "$DOTFILES/scripts/toggle-hyprsunset.sh",
     "smooth-scrolling-threshold": 1,
     "tooltip": false,
