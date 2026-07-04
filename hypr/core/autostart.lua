@@ -1,0 +1,7 @@
+hl.exec_once("dbus-update-activation-environment --systemd --all")
+hl.exec_once("hyprpaper")
+hl.exec_once("waybar")
+hl.exec_once("swaync")
+hl.exec_once("hyprsunset")
+hl.exec_once("nm-applet --indicator")
+hl.exec_once("hyprctl setcursor Hackneyed 28")

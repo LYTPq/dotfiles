@@ -1,0 +1,32 @@
+local M = {}
+
+M.mod = "SUPER"
+
+M.apps = {
+  terminal = "kitty",
+  browser = "firefox",
+  browser_school = "chromium",
+  filemanager = "dolphin",
+  lockscreen = "hyprlock",
+  notifpanel = "swaync-client -t",
+  colorpicker = "hyprpicker -a",
+  record = "obs --startrecording --minimize-to-tray",
+  ide = "code",
+  passmanager = "bitwarden-desktop",
+}
+
+M.scripts = {
+  launcher = "$DOTFILES/rofi/launcher/launcher.sh",
+  powermenu = "$DOTFILES/rofi/powermenu/powermenu.sh",
+  websearch = "$DOTFILES/rofi/websearch/websearch.sh",
+  screenshot = "$DOTFILES/scripts/screenshot.sh",
+  screenshotfull = "$DOTFILES/scripts/screenshot-full.sh",
+  ocr = "$DOTFILES/scripts/ocr.sh",
+  zen = "$DOTFILES/scripts/toggle-zen.sh",
+  mediactl = "$DOTFILES/scripts/mediactl.sh",
+  mouseclick = "$DOTFILES/scripts/mouse-click.sh",
+  eyetemp = "$DOTFILES/scripts/toggle-hyprsunset.sh",
+  zoom = "$DOTFILES/scripts/zoom.sh",
+}
+
+return M
