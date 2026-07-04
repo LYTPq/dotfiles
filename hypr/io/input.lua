@@ -33,13 +33,37 @@ hl.config({
   },
 })
 
-hl.gesture(3, "horizontal", "workspace")
-hl.gesture(3, "up", "dispatcher", "exec", var.scripts.launcher)
-hl.gesture(3, "down", "dispatcher", "exec", var.scripts.powermenu)
-
-hl.workspace({
-  name = "special:window",
-  gapsin = 3,
-  gapsout = "120 240 120 240",
+hl.gesture({
+  fingers = 3,
+  direction = "horizontal",
+  action = "workspace",
 })
-hl.gesture(4, "vertical", "dispatcher", "togglespecialworkspace", "window")
+
+hl.gesture({
+  fingers = 3,
+  direction = "up",
+  action = function()
+    hl.exec_cmd(var.scripts.launcher)
+  end,
+})
+
+hl.gesture({
+  fingers = 3,
+  direction = "down",
+  action = function()
+    hl.exec_cmd(var.scripts.powermenu)
+  end,
+})
+
+hl.gesture({
+  fingers = 4,
+  direction = "vertical",
+  action = "special",
+  workspace_name = "window",
+})
+
+hl.workspace_rule({
+  workspace = "special:window",
+  gaps_in = 3,
+  gaps_out = { top = 120, right = 240, bottom = 120, left = 240 },
+})

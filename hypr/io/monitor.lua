@@ -3,5 +3,5 @@ hl.monitor({
   mode = "preferred",
   position = "auto",
   scale = "auto",
-  disabled = true,
+  disabled = false,
 })
