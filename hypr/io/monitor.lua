@@ -5,3 +5,5 @@ hl.monitor({
   scale = "auto",
   disabled = false,
 })
+
+hl.config({ xwayland = { force_zero_scaling = true } })

@@ -1,0 +1,6 @@
+time=2026-07-05T21:45:46.242+04:00 level=INFO msg="cliamp starting (version=v1.57.1 level=INFO)"
+time=2026-07-05T21:52:47.982+04:00 level=INFO msg="cliamp starting (version=v1.57.1 level=INFO)"
+time=2026-07-05T21:57:57.551+04:00 level=INFO msg="spotify: sign-in URL: https://accounts.spotify.com/authorize?client_id=35154f5ed07f440abda8a83887dc033b&code_challenge=30x8GB1LTs8ghnLSB5XIPbQwoVNs0FbXjKL_117EHAw&code_challenge_method=S256&redirect_uri=http%3A%2F%2F127.0.0.1%3A19872%2Flogin&response_type=code&scope=playlist-read-collaborative+playlist-read-private+playlist-modify-public+playlist-modify-private+streaming+user-library-read+user-library-modify+user-read-private+user-read-playback-state+user-modify-playback-state+user-read-currently-playing+user-read-recently-played+user-top-read+user-follow-read+user-follow-modify"
+time=2026-07-05T22:16:19.251+04:00 level=INFO msg="cliamp starting (version=v1.57.1 level=INFO)"
+time=2026-07-05T23:02:32.550+04:00 level=INFO msg="cliamp starting (version=v1.57.1 level=INFO)"
+time=2026-07-05T23:03:29.768+04:00 level=INFO msg="cliamp starting (version=v1.57.1 level=INFO)"

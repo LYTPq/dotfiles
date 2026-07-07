@@ -1,0 +1,12 @@
+theme = ""
+
+
+eq_preset = "Bass Boost"
+eq = [8, 6, 4, 2, 0, 0, 0, 0, 0, 0]
+visualizer = "Scatter"
+speed = 1.00
+shuffle = false
+repeat = "Off"
+[spotify]
+client_id = "35154f5ed07f440abda8a83887dc033b"
+bitrate = 320
