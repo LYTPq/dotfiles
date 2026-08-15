@@ -25,7 +25,7 @@ declare -A sites=(
   [speed]="https://www.speedtest.net/"
 )
 
-search_engine="https://duckduckgo.com/?q="
+search_engine="https://www.google.com/search?q="
 
 query=$(rofi -dmenu -theme "$HOME/.config/rofi/websearch/main.rasi")
 

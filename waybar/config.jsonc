@@ -42,6 +42,7 @@
     "active-only": false,
     "all-outputs": true,
     "warp-on-scroll": false,
+    "on-click-window" : "activate",  //maybe it will help the move
     "format": "{icon}",
     "format-icons": {
       "1": "1",

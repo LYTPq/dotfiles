@@ -6,7 +6,7 @@ hl.on("hyprland.start", function()
   hl.exec_cmd("hyprsunset")
   hl.exec_cmd("nm-applet --indicator")
   hl.exec_cmd("hyprctl setcursor Hackneyed 28")
+  hl.exec_cmd("systemctl --user start hyprpolkitagent")
 end)
-
 
 -- there is backup in claude code history
